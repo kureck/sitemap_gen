@@ -13,6 +13,7 @@ class Crawler:
     def __init__(self, url):
         self.url = url
         self.host = urlparse(url).netloc
+        self.sitemap = {url: ''}
 
     def crawl(self, url):
         r = urlopen(url).read()
